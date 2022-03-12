@@ -1,0 +1,103 @@
+<script>
+
+function calculateAverage() {
+	var numClasses = 0;
+	var acc = 0;
+	if(document.getElementById("class1in").value != -1) {
+		numClasses++;
+		if(document.getElementById("class1").children[1].checked) acc += parseFloat(document.getElementById("class1").children[0].value) * 1.05;
+		else if(document.getElementById("class1").children[2].checked) acc += parseFloat(document.getElementById("class1").children[0].value) * 1.1;
+		else acc += parseFloat(document.getElementById("class1").children[0].value)
+	}
+
+	if(document.getElementById("class2in").value != -1) {
+		numClasses++;
+		if(document.getElementById("class2").children[1].checked) acc += parseFloat(document.getElementById("class2").children[0].value) * 1.05;
+		else if(document.getElementById("class2").children[2].checked) acc += parseFloat(document.getElementById("class2").children[0].value) * 1.1;
+		else acc += parseFloat(document.getElementById("class2").children[0].value)
+	}
+
+	if(document.getElementById("class3in").value != -1) {
+		numClasses++;
+		if(document.getElementById("class3").children[1].checked) acc += parseFloat(document.getElementById("class3").children[0].value) * 1.05;
+		else if(document.getElementById("class3").children[2].checked) acc += parseFloat(document.getElementById("class3").children[0].value) * 1.1;
+		else acc += parseFloat(document.getElementById("class3").children[0].value)
+	}
+
+	if(document.getElementById("class4in").value != -1) {
+		numClasses++;
+		if(document.getElementById("class4").children[1].checked) acc += parseFloat(document.getElementById("class4").children[0].value) * 1.05;
+		else if(document.getElementById("class4").children[2].checked) acc += parseFloat(document.getElementById("class4").children[0].value) * 1.1;
+		else acc += parseFloat(document.getElementById("class4").children[0].value)
+	}
+
+	if(document.getElementById("class5in").value != -1) {
+		numClasses++;
+		if(document.getElementById("class5").children[1].checked) acc += parseFloat(document.getElementById("class5").children[0].value) * 1.05;
+		else if(document.getElementById("class5").children[2].checked) acc += parseFloat(document.getElementById("class5").children[0].value) * 1.1;
+		else acc += parseFloat(document.getElementById("class5").children[0].value)
+	}
+
+	if(document.getElementById("class6in").value != -1) {
+		numClasses++;
+		if(document.getElementById("class6").children[1].checked) acc += parseFloat(document.getElementById("class6").children[0].value) * 1.05;
+		else if(document.getElementById("class6").children[2].checked) acc += parseFloat(document.getElementById("class6").children[0].value) * 1.1;
+		else acc += parseFloat(document.getElementById("class6").children[0].value)
+	}
+
+	if(document.getElementById("class7in").value != -1) {
+		numClasses++;
+		if(document.getElementById("class7").children[1].checked) acc += parseFloat(document.getElementById("class7").children[0].value) * 1.05;
+		else if(document.getElementById("class7").children[2].checked) acc += parseFloat(document.getElementById("class7").children[0].value) * 1.1;
+		else acc += parseFloat(document.getElementById("class7").children[0].value)
+	}
+
+	if(document.getElementById("class8in").value != -1) {
+		numClasses++;
+		if(document.getElementById("class8").children[1].checked) acc += parseFloat(document.getElementById("class8").children[0].value) * 1.05;
+		else if(document.getElementById("class8").children[2].checked) acc += parseFloat(document.getElementById("class8").children[0].value) * 1.1;
+		else acc += parseFloat(document.getElementById("class8").children[0].value)
+	}
+	
+	document.getElementById("average").innerHTML = "Average: " + acc / numClasses;
+}
+
+</script>
+
+<p>set to -1 if there are too many inputs</p>
+
+<div id="class1">
+<input id="class1in" value=100></input>
+<input type="checkbox"></input> Honors <input type="checkbox"></input> AP
+</div>
+<div id="class2">
+<input id="class2in" value=100></input>
+<input type="checkbox"></input> Honors <input type="checkbox"></input> AP
+</div>
+<div id="class3">
+<input id="class3in" value=100></input>
+<input type="checkbox"></input> Honors <input type="checkbox"></input> AP
+</div>
+<div id="class4">
+<input id="class4in" value=100></input>
+<input type="checkbox"></input> Honors <input type="checkbox"></input> AP
+</div>
+<div id="class5">
+<input id="class5in" value=100></input>
+<input type="checkbox"></input> Honors <input type="checkbox"></input> AP
+</div>
+<div id="class6">
+<input id="class6in" value=100></input>
+<input type="checkbox"></input> Honors <input type="checkbox"></input> AP
+</div>
+<div id="class7">
+<input id="class7in" value=100></input>
+<input type="checkbox"></input> Honors <input type="checkbox"></input> AP
+</div>
+<div id="class8">
+<input id="class8in" value=100></input>
+<input type="checkbox"></input> Honors <input type="checkbox"></input> AP
+</div>
+
+<p id="average">Average: 100</p>
+<button onclick="calculateAverage()">Calculate</average>
